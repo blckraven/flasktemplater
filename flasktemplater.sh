@@ -23,6 +23,19 @@ function flask
     #with tutorial comments
         if [ $myargs = '-w' ]; then
             echo -e "${GREEN}In this folder will be your app.py file with tutorial comments$NC"
+            mkdir flaskapp
+            cd flaskapp
+            mkdir static
+            mkdir templates
+            cd templates
+            echo "<html>" >> index.html
+            echo "<header><title>Hello World</title></header>" >> index.html 
+            echo "<body>" >> index.html
+            echo "Hello world" >> index.html
+            echo "</body>" >> index.html
+            echo "</html>" >> index.html
+            cd ..
+
             echo "#Import the flask module and create an app using Flask; and import render_template for templates/index.html" >> app.py
             echo "from flask import Flask, render_template" >> app.py
             echo "app = Flask(__name__)" >> app.py
@@ -47,6 +60,19 @@ function flask
     #without tutorial comments
         if [ $myargs = '-wo' ]; then
             echo -e "${GREEN}In this folder will be your app.py file without tutorial comments$NC"
+            mkdir flaskapp
+            cd flaskapp
+            mkdir static
+            mkdir templates
+            cd templates
+            echo "<html>" >> index.html
+            echo "<header><title>Hello World</title></header>" >> index.html 
+            echo "<body>" >> index.html
+            echo "Hello world" >> index.html
+            echo "</body>" >> index.html
+            echo "</html>" >> index.html
+            cd ..
+
             echo "from flask import Flask, render_template" >> app.py
             echo "app = Flask(__name__)" >> app.py
             echo "" >> app.py
